@@ -1,6 +1,5 @@
 import React from "react";
 import Products from "../../components/products/Products";
-import Directory from "../../components/directory/Directory";
 import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
@@ -14,7 +13,6 @@ const HomePage = () => {
       <div style={{ padding: "0 7.5px 0" }}>
         <Products />
       </div>
-      <Directory />
       <Footer />
     </div>
   );
