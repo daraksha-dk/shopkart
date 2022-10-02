@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./header.scss";
+import CartIcon from "../cart/CartIcon";
 import { ReactComponent as Hr } from "../../assets/images/hr.svg";
 
 const Header = () => {
@@ -22,30 +23,7 @@ const Header = () => {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-
-        <button className="btn btn-primary">Add to Cart</button>
-      </div>
-      <div className="options">
-        <select className="form-select">
-          <option value="" disabled>
-            Category
-          </option>
-          <option value="hoodies">Hoodies</option>
-          <option value="t-shirt">T-Shirt</option>
-        </select>
-        <select className="form-select">
-          <option value="" disabled>
-            Size
-          </option>
-          <option value="S">S</option>
-          <option value="M">M</option>
-          <option value="L">L</option>
-          <option value="XL">XL</option>
-          <option value="XXL">XXL</option>
-        </select>
-        <span className="reset-btn">
-          <i className="fa-solid fa-arrow-rotate-left"></i> Reset
-        </span>
+        <CartIcon />
       </div>
     </div>
   );

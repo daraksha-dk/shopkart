@@ -1,6 +1,7 @@
 import React from "react";
 import Products from "../../components/products/Products";
 import Directory from "../../components/directory/Directory";
+import Footer from "../../components/footer/Footer";
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
         <Products />
       </div>
       <Directory />
+      <Footer />
     </div>
   );
 };

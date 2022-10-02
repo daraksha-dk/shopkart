@@ -1,0 +1,25 @@
+.cart-icon {
+  padding-right: 50px;
+  padding-left: 50px;
+  position: relative;
+  color: white;
+
+  .item-count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #ffb538;
+    border-radius: 100%;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: -1px;
+    position: absolute;
+    left: 25px;
+    bottom: 27px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
