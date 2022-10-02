@@ -10,10 +10,10 @@ const HomePage = () => {
         flexDirection: "column",
       }}
     >
-      <Directory />
       <div style={{ padding: "0 7.5px 0" }}>
         <Products />
       </div>
+      <Directory />
     </div>
   );
 };
