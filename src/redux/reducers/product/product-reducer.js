@@ -1,21 +1,23 @@
+import PRODUCTS_DATA from "../../../productsData";
+
 const INITIAL_STATE = {
-  isFetching: false,
-  products: null,
-  errorMessege: undefined,
+  // isFetching: false,
+  // errorMessege: undefined,
+  // NOT NEEDED FOR NOW
+  products: PRODUCTS_DATA,
 };
 
 const productReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "FETCH_PRODUCTS_START":
-      return { ...state, isFetching: true };
-    case "FETCH_PRODUCTS_SUCCESS":
+    case "UPDATE_PRODUCTS":
       return {
         ...state,
-        isFetching: false,
         products: action.payload,
       };
-    case "FETCH_PRODUCTS_FAILURE":
-      return { ...state, isFetching: false, errorMessege: action.payload };
+
+    case "RESET_PRODUCTS":
+      return INITIAL_STATE;
+
     default:
       return state;
   }

@@ -4,9 +4,36 @@ import "./header.scss";
 import CartIcon from "../cart/CartIcon";
 import { ReactComponent as Hr } from "../../assets/images/hr.svg";
 import CartDropdown from "../cart/CartDropdown";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+import { selectProducts } from "../../redux/reducers/product/products-selectors";
+import { resetProducts, updateProducts } from "../../redux/actions";
 
 const Header = () => {
-  const [search, setSearch] = useState("");
+  const [searchInput, setSearchInput] = useState("");
+  const productData = useSelector(selectProducts, shallowEqual);
+  const dispatch = useDispatch();
+
+  const searchItems = (searchValue) => {
+    if (!searchValue) {
+      dispatch(resetProducts());
+      setSearchInput(searchValue);
+      return;
+    }
+
+    let tempProducts = productData;
+    tempProducts = tempProducts.map((section) => {
+      return {
+        ...section,
+        items: section.items.filter((item) =>
+          item.name.toLowerCase().includes(searchValue.toLowerCase())
+        ),
+      };
+    });
+
+    dispatch(updateProducts(tempProducts));
+    setSearchInput(searchValue);
+  };
+
   return (
     <div className="header">
       <Link to="/" className="logo-container">
@@ -21,9 +48,11 @@ const Header = () => {
         <input
           type="text"
           className="form-control"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
+          value={searchInput}
+          onChange={(e) => searchItems(e.target.value)}
+          placeholder="Search for products"
         />
+
         <CartIcon />
       </div>
       <CartDropdown />

@@ -58,22 +58,15 @@ export const fetchCollectionsFailure = (error) => {
   };
 };
 
-export const fetchProductsStart = () => {
+export const updateProducts = (products) => {
   return {
-    type: "FETCH_PRODUCTS_START",
-  };
-};
-
-export const fetchProductsSuccess = (products) => {
-  return {
-    type: "FETCH_PRODUCTS_SUCCESS",
+    type: "UPDATE_PRODUCTS",
     payload: products,
   };
 };
 
-export const fetchProductsFailure = (error) => {
+export const resetProducts = () => {
   return {
-    type: "FETCH_PRODUCTS_FAILURE",
-    payload: error,
+    type: "RESET_PRODUCTS",
   };
 };
