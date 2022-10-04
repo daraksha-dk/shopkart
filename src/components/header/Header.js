@@ -3,6 +3,7 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "./header.scss";
 import CartIcon from "../cart/CartIcon";
 import { ReactComponent as Hr } from "../../assets/images/hr.svg";
+import CartDropdown from "../cart/CartDropdown";
 
 const Header = () => {
   const [search, setSearch] = useState("");
@@ -25,6 +26,7 @@ const Header = () => {
         />
         <CartIcon />
       </div>
+      <CartDropdown />
     </div>
   );
 };

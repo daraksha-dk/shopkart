@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  align-items: center;
+  font-size: large;
+  margin: 11px 0 11px 0;
+  padding: 0 7px 0 14px;
+  background-color: white;
+
+  .img {
+    width: 70px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .item-info {
+    width: 100%;
+    margin-left: 15px;
+    padding-bottom: 5px;
+
+    .info-head {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      color: #141414ed;
+
+      .name {
+        font-size: 17px;
+        width: 186px;
+      }
+
+      .price {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        position: absolute;
+        right: -5px;
+        top: -8px;
+
+        .symbol {
+          font-size: 17px;
+          color: grey;
+        }
+        .whole {
+          padding-right: 1px;
+          padding-left: 1px;
+          font-size: 21px;
+          color: #939393;
+        }
+        .fraction {
+          font-size: 13px;
+          color: #939393;
+        }
+      }
+    }
+    .qty {
+      margin: 2px 0px 4px 0px;
+      font-size: 15px;
+      color: black;
+    }
+    .size {
+      font-size: 15px;
+      color: black;
+    }
+  }
+}
+.cart-hr {
+  width: 90%;
+  border: 0px;
+  height: 1px;
+  background-color: rgba(126, 126, 126, 0.473);
+}

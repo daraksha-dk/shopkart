@@ -1,0 +1,56 @@
+.price-details {
+  height: 364px;
+  background-color: white;
+  position: sticky;
+  top: 15px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 2px 0px;
+
+  .head {
+    font-weight: 500;
+    font-size: 17px;
+    color: #959595;
+    padding: 17px 18px;
+    border-bottom: 1px solid #f0f3f6;
+  }
+  .price-detail-container {
+    padding: 0 30px;
+  }
+  .row {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: 18px 0;
+  }
+
+  .total {
+    font-size: 19px;
+    padding: 21px 0;
+    margin: 0;
+    border-top: 1px dashed #e0e0e0;
+  }
+
+  .saved-amount {
+    font-family: verdana;
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffb139;
+    padding: 20px 0;
+    border-top: 1px dashed #e0e0e0;
+  }
+}
+
+.grey {
+  color: #939393;
+}
+
+.verdana {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-info {
+  margin-top: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: red;
+}
